@@ -1,4 +1,4 @@
-# Hub Positivo
+# Hub Template
 
 Projeto desenvolvido em React JS com o super set Typescript.
 
