@@ -4,7 +4,7 @@ Projeto desenvolvido em React JS com o super set Typescript.
 
 ## Configurações do Projeto
 
-O **Hub** tem as seguintes configurações dentro do projeto para para que a qualidade, padronização e agilidade sejam seguidas durante o desenvolvimento.
+O **Hub** tem as seguintes configurações dentro do projeto para que a qualidade, padronização e agilidade sejam seguidas durante o desenvolvimento.
 
 
 ### Principais Bibliotecas
