@@ -1,7 +1,7 @@
-import { AuthReducer } from './modules/auth/types';
+import { ExamplesReducer } from './modules/example/types';
 
 interface ApplicationState {
-  auth: AuthReducer;
+  example: ExamplesReducer;
 }
 declare global {
   declare namespace Store {

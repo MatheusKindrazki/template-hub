@@ -22,7 +22,7 @@ const persistConfig = {
   key: persistName,
   storage,
   whitelist: ['auth', 'user'],
-  transform: [encrypted],
+  transforms: [encrypted],
 };
 
 const sagaMiddleware = createSagaMiddleware();
