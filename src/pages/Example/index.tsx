@@ -10,6 +10,7 @@ import * as Yup from 'yup';
 
 import { Input } from '~/components/Form';
 
+import history from '~/services/history';
 import getValidationErrors from '~/utils/getValidationErrors';
 import example from '~/validators/example';
 
@@ -24,7 +25,7 @@ const Example: React.FC = () => {
         abortEarly: false,
       });
 
-      alert(JSON.stringify(data)); //eslint-disable-line
+      history.push('/dashboard');
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
         const errors = getValidationErrors(err);

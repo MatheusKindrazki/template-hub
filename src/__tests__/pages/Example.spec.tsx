@@ -35,7 +35,7 @@ describe('Exemplo de teste', () => {
     fireEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(mockHistory).toHaveBeenLastCalledWith('/teste');
+      expect(mockHistory).toHaveBeenLastCalledWith('/dashboard');
     });
   });
 });
