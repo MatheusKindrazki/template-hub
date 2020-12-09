@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { Box, Button, Heading, Text } from '@chakra-ui/react';
 import { FormHandles } from '@unform/core';
@@ -10,11 +10,12 @@ import * as Yup from 'yup';
 
 import { Input } from '~/components/Form';
 
-import history from '~/services/history';
 import getValidationErrors from '~/utils/getValidationErrors';
 import example from '~/validators/example';
 
 const Example: React.FC = () => {
+  const history = useHistory();
+
   const formRef = useRef<FormHandles>(null);
 
   const handleSubmit = useCallback(async data => {
