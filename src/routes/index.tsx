@@ -4,6 +4,7 @@ import { Switch, HashRouter } from 'react-router-dom';
 
 import { ConnectedRouter } from 'connected-react-router';
 
+import Example from '~/pages/Example';
 import Home from '~/pages/Home';
 import history from '~/services/history';
 
@@ -17,6 +18,7 @@ const Routes: React.FC = () => {
           <Route path="/" exact component={Home} />
 
           <Route path="/dashboard" component={Home} isPrivate />
+          <Route path="/example" component={Example} isPrivate />
         </Switch>
       </HashRouter>
     </ConnectedRouter>

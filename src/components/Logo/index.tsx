@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Flex, Heading, Box, Image } from '@chakra-ui/react';
 
-import logo from '~/assets/logo.png';
+import logo from '~/assets/logo.svg';
 
 const Logo: React.FC = () => {
   return (
@@ -16,8 +16,7 @@ const Logo: React.FC = () => {
           textAlign={['left', 'center']}
           ml={['4', '0']}
         >
-          Hub <br />
-          Positivo
+          Hub Template
         </Heading>
       </Box>
     </Flex>

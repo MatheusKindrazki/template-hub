@@ -15,31 +15,25 @@ interface RouteProps extends ReactRouteProps {
 
 const Route: React.FC<RouteProps> = ({
   isPrivate = false,
-  component: Component,
+  component,
   ...rest
 }) => {
   const signed = true;
 
   const RenderLayout = Logged;
 
+  if (!signed && isPrivate) {
+    return <Redirect to="/" />;
+  }
+
+  if (signed && !isPrivate) {
+    return <Redirect to="/dashboard" />;
+  }
+
   return (
-    <ReactRoute
-      {...rest}
-      render={({ location }) => {
-        return isPrivate === !!signed ? (
-          <RenderLayout>
-            <Component />
-          </RenderLayout>
-        ) : (
-          <Redirect
-            to={{
-              pathname: isPrivate ? '/' : '/dashboard',
-              state: { from: location },
-            }}
-          />
-        );
-      }}
-    />
+    <RenderLayout>
+      <ReactRoute component={component} {...rest} />
+    </RenderLayout>
   );
 };
 

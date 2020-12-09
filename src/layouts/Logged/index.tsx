@@ -1,9 +1,20 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Box } from '@chakra-ui/react';
 
 const Dashboard: React.FC = ({ children }) => {
-  return <Container>{children}</Container>;
+  return (
+    <Box
+      w="100%"
+      h="100vh"
+      d="flex"
+      justifyContent="center"
+      flexDirection="column"
+      backgroundColor="blue.50"
+    >
+      {children}
+    </Box>
+  );
 };
 
 export default Dashboard;

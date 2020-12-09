@@ -6,6 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { ChakraProvider } from '@chakra-ui/react';
 import { ToastContainer } from 'react-toastify';
+import { ThemeProvider } from 'styled-components';
 
 import { store, persistor } from '~/store';
 import { theme } from '~/styles';
@@ -26,9 +27,10 @@ const AppProvider: React.FC = ({ children }) => (
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      >
-        <ChakraProvider theme={theme}>{children}</ChakraProvider>
-      </ToastContainer>
+      />
+      <ChakraProvider theme={theme}>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </ChakraProvider>
     </PersistGate>
   </Provider>
 );

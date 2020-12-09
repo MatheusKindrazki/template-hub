@@ -4,7 +4,9 @@ type DefaultTheme = typeof theme;
 
 const customTheme: DefaultTheme = {
   ...theme,
-
+  config: {
+    initialColorMode: 'light',
+  },
   fontSizes: {
     ...theme.fontSizes,
   },

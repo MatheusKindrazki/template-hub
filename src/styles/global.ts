@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default createGlobalStyle`
 
   body {
+    background: white;
     -webkit-font-smoothing: antialiased;
     overflow: initial;
   }
