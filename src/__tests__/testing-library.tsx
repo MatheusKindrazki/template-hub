@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ThemeProvider, CSSReset } from '@chakra-ui/core';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import {
   render,
   RenderOptions,
@@ -12,9 +12,9 @@ import { theme as HubTheme } from '~/styles';
 
 const AllTheProviders: React.FC = ({ children }) => {
   return (
-    <ThemeProvider theme={HubTheme}>
+    <ChakraProvider theme={HubTheme}>
       <CSSReset /> {children}
-    </ThemeProvider>
+    </ChakraProvider>
   );
 };
 
