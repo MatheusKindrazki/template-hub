@@ -59,13 +59,7 @@ const Example: React.FC = () => {
           iconLeft={<Box as={Lock} color="blue.500" size={18} />}
         />
 
-        <Button
-          mt="3"
-          w="100%"
-          type="submit"
-          variant="solid"
-          variantColor="blue"
-        >
+        <Button mt="3" w="100%" type="submit" variant="solid">
           Entrar
         </Button>
       </Form>
