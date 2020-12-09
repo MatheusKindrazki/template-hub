@@ -2,11 +2,10 @@ import React, { useCallback, useRef } from 'react';
 
 import { useHistory } from 'react-router-dom';
 
-import { Box, Button } from '@chakra-ui/core';
+import { Box, Button } from '@chakra-ui/react';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import { User, Lock } from 'phosphor-react';
-import { toast } from 'react-toastify';
 import * as Yup from 'yup';
 
 import { Input } from '~/components/Form';
@@ -35,7 +34,7 @@ const Example: React.FC = () => {
 
           formRef?.current?.setErrors(errors);
 
-          toast.error('Erro encontrado!');
+          console.error('Erro encontrado!'); // eslint-disable-line
         }
       }
     },

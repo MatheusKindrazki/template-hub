@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Switch } from 'react-router-dom';
+import { Switch, HashRouter } from 'react-router-dom';
 
 import { ConnectedRouter } from 'connected-react-router';
 
@@ -12,13 +12,13 @@ import Route from './Route';
 const Routes: React.FC = () => {
   return (
     <ConnectedRouter history={history}>
-      <div>
+      <HashRouter basename="/" hashType="slash">
         <Switch>
           <Route path="/" exact component={Home} />
 
           <Route path="/dashboard" component={Home} isPrivate />
         </Switch>
-      </div>
+      </HashRouter>
     </ConnectedRouter>
   );
 };

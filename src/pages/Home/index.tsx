@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Heading, Text } from '@chakra-ui/core';
+import { Box, Heading, Text } from '@chakra-ui/react';
 
 import documentTitle from '~/utils/documentTitle';
 

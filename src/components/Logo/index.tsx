@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Heading, Box, Image } from '@chakra-ui/core';
+import { Flex, Heading, Box, Image } from '@chakra-ui/react';
 
 import logo from '~/assets/logo.png';
 

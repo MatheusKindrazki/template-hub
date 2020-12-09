@@ -8,12 +8,10 @@ import {
   InputProps,
   InputLeftElement,
   InputRightElement,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { useField } from '@unform/core';
 
-type InputElement = InputProps<HTMLInputElement>;
-
-interface InputAddIcons extends InputElement {
+interface InputAddIcons extends InputProps {
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
 }

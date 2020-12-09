@@ -18,7 +18,6 @@ const Route: React.FC<RouteProps> = ({
   component: Component,
   ...rest
 }) => {
-
   const signed = true;
 
   const RenderLayout = Logged;

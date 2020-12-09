@@ -13,10 +13,10 @@ import createRootReducer from './modules/rootReducer';
 import rootSaga from './modules/rootSaga';
 
 const encrypted = encryptTransform({
-  secretKey: process.env.REACT_APP_SECRET_ENCRYPTED_KEY || 'PSD-HUB',
+  secretKey: process.env.REACT_APP_SECRET_ENCRYPTED_KEY as string,
 });
 
-const persistName = process.env.REACT_APP_PERSIST_NAME || '@PSD:HUB';
+const persistName = process.env.REACT_APP_PERSIST_NAME as string;
 
 const persistConfig = {
   key: persistName,
